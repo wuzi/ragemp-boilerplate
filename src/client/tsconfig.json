@@ -6,6 +6,8 @@
     "target": "es2015",
     "module": "commonjs",
     "removeComments": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "types" : ["node", "ragemp-c"],
     "outDir": "../../client_packages/"
   },
