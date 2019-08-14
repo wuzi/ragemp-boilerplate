@@ -10,11 +10,11 @@
     "build-server": "cd src/server && tsc",
     "build-client": "cd src/client && tsc",
     "build": "npm run clean && npm run build-server && npm run build-client",
-    "lint": "eslint src/**/*"
+    "lint": "eslint './src/**/*'"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "tsc --noEmit && eslint src/**/*"
+      "pre-commit": "tsc --noEmit && eslint './src/**/*'"
     }
   },
   "repository": {
@@ -41,7 +41,6 @@
     "@typescript-eslint/eslint-plugin": "^2.0.0",
     "@typescript-eslint/parser": "^2.0.0",
     "eslint": "^6.1.0",
-    "eslint-plugin-json": "^1.4.0",
     "husky": "^3.0.3",
     "nodemon": "^1.19.1",
     "rimraf": "^2.7.1",
