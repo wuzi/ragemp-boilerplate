@@ -1,0 +1,14 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "strict": true,
+    "target": "es2015",
+    "module": "commonjs",
+    "removeComments": true,
+    "types" : ["node", "ragemp-s"],
+    "outDir": "../../packages/rage"
+  },
+  "include": [
+    "**/*"
+  ]
+}

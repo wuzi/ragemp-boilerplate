@@ -1,0 +1,15 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "strict": true,
+    "baseUrl": "./",
+    "target": "es2015",
+    "module": "commonjs",
+    "removeComments": true,
+    "types" : ["node", "ragemp-c"],
+    "outDir": "../../client_packages/"
+  },
+  "include": [
+    "**/*"
+  ]
+}
