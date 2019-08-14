@@ -35,6 +35,7 @@
   "homepage": "https://github.com/Wuzi/ragemp-boilerplate#readme",
   "devDependencies": {
     "@types/dotenv": "^6.1.1",
+    "@types/mongoose": "^5.5.12",
     "@types/node": "^12.7.1",
     "@types/ragemp-c": "github:CocaColaBear/types-ragemp-c#master",
     "@types/ragemp-s": "github:CocaColaBear/types-ragemp-s#master",
@@ -48,6 +49,8 @@
     "typescript": "^3.5.3"
   },
   "dependencies": {
-    "dotenv": "^8.0.0"
+    "dotenv": "^8.0.0",
+    "log4js": "^5.0.0",
+    "mongoose": "^5.6.9"
   }
 }
