@@ -13,3 +13,11 @@ logs/
 
 # environment variables, never commit this file
 .env
+
+# ragemp files and folders
+bt.dat
+node.dll
+server.exe
+conf.json
+/bridge
+/plugins
