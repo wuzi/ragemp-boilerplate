@@ -5,6 +5,8 @@
     "baseUrl": "./",
     "target": "es2015",
     "module": "commonjs",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
     "removeComments": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
