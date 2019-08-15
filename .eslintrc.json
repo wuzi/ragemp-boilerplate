@@ -13,7 +13,8 @@
   ],
   "globals": {
     "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly"
+    "SharedArrayBuffer": "readonly",
+    "mp": false
   },
   "parserOptions": {
     "ecmaVersion": 2018,
@@ -41,6 +42,6 @@
     "@typescript-eslint/semi": [
       "error"
     ],
-    "no-undef": "off"
+    "comma-dangle": ["error", "only-multiline"]
   }
 }
