@@ -34,6 +34,7 @@
   },
   "homepage": "https://github.com/Wuzi/ragemp-boilerplate#readme",
   "devDependencies": {
+    "@types/bcrypt": "^3.0.0",
     "@types/dotenv": "^6.1.1",
     "@types/mongoose": "^5.5.12",
     "@types/node": "^12.7.1",
@@ -49,6 +50,7 @@
     "typescript": "^3.5.3"
   },
   "dependencies": {
+    "bcrypt": "^3.0.6",
     "dotenv": "^8.0.0",
     "log4js": "^5.0.0",
     "mongoose": "^5.6.9"
