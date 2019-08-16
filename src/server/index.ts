@@ -1,5 +1,12 @@
 import dotenv from 'dotenv';
+import databaseLoader from './database';
+import moduleLoader from './loaders/module.loader';
 dotenv.config();
 
-import databaseLoader from './database';
-databaseLoader();
+/**
+ * Connect to database before anything else
+ */
+(async () => {
+  await databaseLoader();
+  moduleLoader();
+})();

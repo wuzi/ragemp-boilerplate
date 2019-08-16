@@ -17,6 +17,9 @@ A boilerplate for [RAGE MP] with [MongoDB] and [Typescript]!
 3. Run `npm run lint` to lint the code
 4. Run `npm run build` to compile both `server` and `client`
 
+# Modules
+All the gameplay code should be placed within [modules](https://github.com/Wuzi/ragemp-boilerplate/tree/master/src/server/modules) folder, they are loaded automatically on server-side, you need to require them in [index.ts](https://github.com/Wuzi/ragemp-boilerplate/blob/master/src/client/index.ts) on client-side though.
+
 # Contributing
 Contributions are greatly appreciated. Please fork this repository and open a pull request to add snippets, make grammar tweaks, etc.
 
