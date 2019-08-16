@@ -6,7 +6,7 @@ dotenv.config();
 /**
  * Connect to database before anything else
  */
-(async () => {
+(async (): Promise<void> => {
   await databaseLoader();
   moduleLoader();
 })();
