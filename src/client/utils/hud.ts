@@ -5,8 +5,8 @@ const hiddenHudElements: number[] = [];
  *
  * @param {number[]} elements - Elements to be hidden (https://wiki.rage.mp/index.php?title=HUD_Components)
  */
-const hideHudElements = (elements: number[]) => {
-  for (let element of elements) {
+const hideHudElements = (elements: number[]): void => {
+  for (const element of elements) {
     if (hiddenHudElements.indexOf(element) === -1) hiddenHudElements.push(element);
   }
 };
@@ -14,7 +14,7 @@ const hideHudElements = (elements: number[]) => {
 /**
  * Hide HUD elements every tick
  */
-mp.events.add('render', () => {
+mp.events.add('render', (): void => {
   for (const element of hiddenHudElements) {
     mp.game.ui.hideHudComponentThisFrame(element);
   }
