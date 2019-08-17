@@ -4,7 +4,7 @@
   "description": "RAGEMP server boilerplate",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build && ./server.exe",
+    "start": "npm run build && server.exe",
     "watch": "nodemon --watch packages --watch client_packages --exec \"./server.exe\"",
     "clean": "rimraf client_packages && rimraf packages",
     "build-server": "cd src/server && tsc",
