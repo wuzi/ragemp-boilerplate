@@ -5,6 +5,7 @@
     "baseUrl": "./",
     "target": "es2015",
     "module": "commonjs",
+    "allowJs": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "removeComments": true,

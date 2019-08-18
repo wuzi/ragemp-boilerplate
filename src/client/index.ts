@@ -1,4 +1,16 @@
-require('./modules/player');
+/**
+ * Loaders
+ */
+require('./loaders/lang.loader');
+
+/**
+ * Libraries
+ */
 require('./lib/spot');
 
-mp.events.call('playerConnect');
+/**
+ * Modules
+ */
+require('./modules/player');
+
+mp.events.call('clientLaunched');

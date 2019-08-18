@@ -14,7 +14,8 @@
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly",
-    "mp": false
+    "mp": "readonly",
+    "i18next": "readonly"
   },
   "parserOptions": {
     "ecmaVersion": 2018,

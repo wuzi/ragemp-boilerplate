@@ -1,3 +1,5 @@
+import i18next from 'i18next';
+
 /**
  * This event is triggered when a player send a message in the chat.
  *
@@ -5,5 +7,5 @@
  * @param {string} message - The message sent
  */
 mp.events.add('playerChat', (player: PlayerMp, message: string) => {
-  mp.players.broadcast(`${player.name}: ${message}`);
+  mp.players.broadcast(i18next.t('CHAT.SAY', { name: player.name, message }));
 });
