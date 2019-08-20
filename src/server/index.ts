@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 import databaseLoader from './database';
 import languageLoader from './loaders/lang.loader';
+import bootstrapLoader from './loaders/bootstrap.loader';
 import moduleLoader from './loaders/module.loader';
 dotenv.config();
 
@@ -10,5 +11,6 @@ dotenv.config();
 (async (): Promise<void> => {
   await databaseLoader();
   languageLoader();
+  bootstrapLoader();
   moduleLoader();
 })();
