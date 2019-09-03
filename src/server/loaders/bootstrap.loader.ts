@@ -4,16 +4,21 @@ import logger from '../utils/logger.util';
 /**
  * Spawn entities into world
  */
-const bootstrapLoader = (): void => {
+const bootstrapLoader = async (): Promise<void> => {
   try {
     /**
-     * Load all vehicles and spawn them
+     * Spawn all entities asynchronously
      */
-    Vehicle.find().then((vehicles): void => {
-      for (const vehicle of vehicles) {
-        vehicle.spawn();
-      }
-    });
+    await ((): void => {
+      /**
+       * Load all vehicles and spawn them
+       */
+      Vehicle.find().then((vehicles): void => {
+        for (const vehicle of vehicles) {
+          vehicle.spawn();
+        }
+      });
+    })();
 
     logger('loaders', 'Game successfully bootstrapped!', 'info');
   } catch (err) {
