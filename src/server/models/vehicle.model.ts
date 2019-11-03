@@ -28,7 +28,6 @@ export const VehicleSchema = new mongoose.Schema({
     x: Number,
     y: Number,
     z: Number,
-    required: true,
   },
 }, {
   timestamps: true,
