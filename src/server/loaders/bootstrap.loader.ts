@@ -9,7 +9,7 @@ const bootstrapLoader = async (): Promise<void> => {
     /**
      * Spawn all entities asynchronously
      */
-    await ((): void => {
+    await (async (): Promise<void> => {
       /**
        * Load all vehicles and spawn them
        */
