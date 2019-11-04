@@ -1,16 +1,16 @@
 /**
  * Loaders
  */
-require('./loaders/lang.loader');
+import 'loaders/lang.loader';
 
 /**
  * Libraries
  */
-require('./lib/spot');
+import 'lib/spot';
 
 /**
  * Modules
  */
-require('./modules/player');
+import 'modules/player';
 
 mp.events.call('clientLaunched');
