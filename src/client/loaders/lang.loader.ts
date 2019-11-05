@@ -1,4 +1,4 @@
-require('./lib/i18next');
+import 'lib/i18next';
 
 // languages
 import en from 'lang/en';
