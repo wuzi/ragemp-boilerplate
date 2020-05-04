@@ -10,7 +10,7 @@
     "build-server": "cd src/server && tsc",
     "build-client": "cd src/client && tsc",
     "build": "npm run clean && npm run build-server && npm run build-client",
-    "lint": "eslint . --ext .ts --fix"
+    "lint": "eslint . --ext .ts"
   },
   "husky": {
     "hooks": {
