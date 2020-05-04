@@ -14,7 +14,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "tsc --noEmit && npm run lint"
+      "pre-push": "tsc --noEmit && npm run lint"
     }
   },
   "repository": {
