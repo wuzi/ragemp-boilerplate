@@ -4,9 +4,9 @@
 import 'loaders/lang.loader';
 
 /**
- * Libraries
+ * Utils
  */
-import 'lib/spot';
+import 'utils/spot';
 
 /**
  * Modules

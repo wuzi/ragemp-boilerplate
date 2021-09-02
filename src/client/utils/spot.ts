@@ -1,6 +1,6 @@
-const spots: SpotMp[] = [];
-
 class SpotMp {
+  public static spots: SpotMp[] = [];
+
   public position: Vector3Mp;
 
   constructor(private blip: BlipMp, private marker: MarkerMp, private colshape: ColshapeMp) {
@@ -16,8 +16,8 @@ class SpotMp {
     if (mp.markers.exists(this.marker)) this.marker.destroy();
     if (mp.colshapes.exists(this.colshape)) this.colshape.destroy();
 
-    const i = spots.findIndex((spot) => { return this == spot; });
-    if (i != -1) spots.splice(i, 1);
+    const i = SpotMp.spots.findIndex((spot) => { return this == spot; });
+    if (i != -1) SpotMp.spots.splice(i, 1);
   }
 }
 
@@ -47,13 +47,13 @@ class SpotMpPool {
     const colshape = mp.colshapes.newSphere(position.x, position.y, position.z, scale / 2);
     const spot = new SpotMp(blip, marker, colshape);
 
-    spots.push(spot);
+    SpotMp.spots.push(spot);
     return spot;
   }
 }
 
 mp.events.add('playerEnterColshape', (colshape: ColshapeMp) => {
-  for (const spot of spots) {
+  for (const spot of SpotMp.spots) {
     if (spot.getColshape() == colshape) {
       mp.events.call('playerEnterSpot', spot);
     }
@@ -61,7 +61,7 @@ mp.events.add('playerEnterColshape', (colshape: ColshapeMp) => {
 });
 
 mp.events.add('playerExitColshape', (colshape: ColshapeMp) => {
-  for (const spot of spots) {
+  for (const spot of SpotMp.spots) {
     if (spot.getColshape() == colshape) {
       mp.events.call('playerExitSpot', spot);
     }
