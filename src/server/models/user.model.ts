@@ -16,7 +16,9 @@ export const UserSchema = new mongoose.Schema<User>({
 });
 
 UserSchema.pre('save', function (this: User): void {
-  this.password = bcrypt.hashSync(this.password, 10);
+  if (this.isNew) {
+    this.password = bcrypt.hashSync(this.password, 10);
+  }
 });
 
 const User = mongoose.model<User>('User', UserSchema);
