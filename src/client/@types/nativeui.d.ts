@@ -1,6 +1,5 @@
 /* eslint-disable no-dupe-class-members */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/interface-name-prefix */
 declare module 'plugins/nativeui' {
   export enum BadgeStyle {
     None,
@@ -80,7 +79,7 @@ declare module 'plugins/nativeui' {
 
     static Parse(point: number[]): Point;
     static Parse(point: { X: number; Y: number }): Point;
-    static Parse(arg: object | string): Point;
+    static Parse(arg: Record<string, unknown> | string): Point;
   }
 
   export class ListItem {
@@ -119,17 +118,17 @@ declare module 'plugins/nativeui' {
     public Offset: Point;
     public Parent: Menu;
 
-    public get Text();
+    public get Text(): string;
     public set Text(text: string);
 
-    public get Description();
+    public get Description(): string;
     public set Description(text: string);
 
     public RightLabel: string;
     public LeftBadge: BadgeStyle;
     public RightBadge: BadgeStyle;
 
-    constructor(text: string, description?: string, data?: any);
+    constructor(text: string, description?: string, data?: unknown);
 
     public SetVerticalPosition(y: number): void;
     public SetLeftBadge(badge: BadgeStyle): void;
@@ -144,22 +143,22 @@ declare module 'plugins/nativeui' {
   }
 
   export class UIMenuDynamicListItem extends UIMenuItem {
-    public get PreCaptionText();
+    public get PreCaptionText(): string;
     public set PreCaptionText(text: string);
 
-    public get LeftMoveThreshold();
+    public get LeftMoveThreshold(): number;
     public set LeftMoveThreshold(amt: number);
 
-    public get RightMoveThreshold();
+    public get RightMoveThreshold(): number;
     public set RightMoveThreshold(amt: number);
 
-    public get LowerThreshold();
+    public get LowerThreshold(): number;
     public set LowerThreshold(amt: number);
 
-    public get UpperThreshold();
+    public get UpperThreshold(): number;
     public set UpperThreshold(amt: number);
 
-    public get SelectedValue();
+    public get SelectedValue(): number;
     public set SelectedValue(value: number);
 
     constructor(text: string, description?: string, lowerThreshold?: number, upperThreshold?: number, startValue?: number);
@@ -169,29 +168,29 @@ declare module 'plugins/nativeui' {
     public ScrollingEnabled: boolean;
     public HoldTimeBeforeScroll: number;
 
-    public get Collection();
+    public get Collection(): ListItem[];
     public set Collection(collection: ListItem[]);
 
-    public get SelectedItem();
+    public get SelectedItem(): ListItem;
     public set SelectedItem(item: ListItem);
 
     public get SelectedValue(): string;
 
-    public get Index();
+    public get Index(): number;
     public set Index(value: number);
 
     constructor(text: string, description?: string, collection?: ItemsCollection, startIndex?: number);
   }
 
   export class UIMenuSliderItem extends UIMenuItem {
-    constructor(text: string, items: any[], index: number, description?: string, divider?: boolean, data?: any);
+    constructor(text: string, items: any[], index: number, description?: string, divider?: boolean, data?: unknown);
   }
 
   export class Menu {
-    public get Subtitle();
+    public get Subtitle(): string;
     public set Subtitle(text: string);
 
-    public get Visible();
+    public get Visible(): boolean;
     public set Visible(toggle: boolean);
 
     public readonly IndexChange: LiteEvent;
