@@ -21,3 +21,6 @@ server.exe
 conf.json
 /bridge
 /plugins
+
+# lock files
+package-lock.json
