@@ -1,4 +1,3 @@
-import { RageEvent } from '../types/events.interface';
 import logger from '../utils/logger.util';
 import modules from '../modules';
 
@@ -14,7 +13,7 @@ export default async function (): Promise<void> {
           typeof method === 'string' &&
           typeof instance[method as never] == 'function'
         ) {
-          if (Object.values(RageEvent).includes(method as RageEvent)) {
+          if (Object.values(RageEnums.EventKey).includes(method as RageEnums.EventKey)) {
             mp.events.add(method, instance[method as never]);
           }
         }

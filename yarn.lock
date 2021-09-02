@@ -158,9 +158,9 @@
   version "0.0.21"
   resolved "https://codeload.github.com/CocaColaBear/types-ragemp-c/tar.gz/71263be76f6611001aaa1ce06e4c12e0649c74b3"
 
-"@types/ragemp-s@github:CocaColaBear/types-ragemp-s#master":
+"@types/ragemp-s@github:wuzi/types-ragemp-s#master":
   version "0.2.25"
-  resolved "https://codeload.github.com/CocaColaBear/types-ragemp-s/tar.gz/20bd9fe6b033b48bd36e3b28e8993dd5ebc3f4f6"
+  resolved "https://codeload.github.com/wuzi/types-ragemp-s/tar.gz/433dcbe0dd8107f0c597a973ea1656e527f8f3ca"
 
 "@types/webidl-conversions@*":
   version "6.1.1"
