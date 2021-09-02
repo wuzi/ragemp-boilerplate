@@ -22,7 +22,7 @@ const bootstrapLoader = async (): Promise<void> => {
 
     logger('loaders', 'Game successfully bootstrapped!', 'info');
   } catch (err) {
-    logger('loaders', `Error while bootstrapping game (Error: ${err.message} / ${err.stack})!`, 'error');
+    logger('loaders', `Error while bootstrapping game (Error: ${err instanceof Error ? err.message : ''})!`, 'error');
   }
 };
 

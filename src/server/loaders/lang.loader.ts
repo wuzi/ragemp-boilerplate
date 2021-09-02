@@ -14,7 +14,7 @@ const languageLoader = (): void => {
     });
     logger('loaders', 'Loaded languages successfully!', 'info');
   } catch (err) {
-    logger('loader', `Error while loading languages (Error: ${err.message} / ${err.stack})!`, 'error');
+    logger('loader', `Error while loading languages (Error: ${err instanceof Error ? err.message : ''})!`, 'error');
   }
 };
 

@@ -11,7 +11,7 @@ const moduleLoader = async (): Promise<void> => {
     });
     logger('loaders', 'Loaded modules successfully!', 'info');
   } catch (err) {
-    logger('loader', `Error while loading a module (Error: ${err.message} / ${err.stack})!`, 'error');
+    logger('loader', `Error while loading a module (Error: ${err instanceof Error ? err.message : ''})!`, 'error');
   }
 };
 
