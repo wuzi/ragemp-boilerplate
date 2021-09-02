@@ -21,6 +21,9 @@ server.exe
 conf.json
 /bridge
 /plugins
+/bin
+/dotnet
+ragemp-server
 
 # lock files
 package-lock.json
