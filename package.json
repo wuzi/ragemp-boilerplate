@@ -7,9 +7,9 @@
     "start": "ragemp-server.exe",
     "watch": "nodemon --watch packages --watch client_packages --exec \"./ragemp-server.exe\"",
     "clean": "rimraf client_packages && rimraf packages",
-    "build-server": "cd src/server && tsc",
-    "build-client": "cd src/client && tsc",
-    "build": "npm run clean && npm run build-server && npm run build-client",
+    "build:server": "cd src/server && tsc",
+    "build:client": "cd src/client && tsc",
+    "build": "npm run clean && npm run build:server && npm run build:client",
     "lint": "eslint . --ext .ts"
   },
   "husky": {
