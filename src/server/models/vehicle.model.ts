@@ -2,27 +2,27 @@ import mongoose from 'mongoose';
 
 export interface Vehicle extends mongoose.Document {
   alpha: number;
-  color: [Array2d, Array2d] | [RGB, RGB];
+  color: [[number, number, number], [number, number, number]];
   dimension: number;
   engine: boolean;
   entity: VehicleMp;
   heading: number;
   locked: boolean;
-  modelId: HashOrString;
+  modelId: string;
   numberPlate: string;
   position: { x: number; y: number; z: number };
   spawn(): void;
 }
 
-export const VehicleSchema = new mongoose.Schema({
+export const VehicleSchema = new mongoose.Schema<Vehicle>({
   alpha: { type: Number },
-  color: { type: Array },
+  color: { type: [[Number, Number, Number], [Number, Number, Number]] },
   dimension: { type: Number },
   engine: { type: Boolean },
   entity: { type: Object, virtual: true },
   heading: { type: Number },
   locked: { type: Boolean },
-  modelId: { type: Object, required: true },
+  modelId: { type: String, required: true },
   numberPlate: { type: String },
   position: {
     x: Number,
