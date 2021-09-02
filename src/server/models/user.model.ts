@@ -7,7 +7,7 @@ export interface User extends mongoose.Document {
   password: string;
 }
 
-export const UserSchema = new mongoose.Schema({
+export const UserSchema = new mongoose.Schema<User>({
   name: { type: String, required: true },
   email: { type: String, required: true },
   password: { type: String, required: true },
