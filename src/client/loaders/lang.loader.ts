@@ -13,7 +13,7 @@ export class LangLoader {
       },
     });
     
-    mp.events.add('playerConnect', (data: { lang: string }) => {
+    mp.events.add('changeLanguage', (data: { lang: string }) => {
       i18next.changeLanguage(data.lang);
     });
   }
