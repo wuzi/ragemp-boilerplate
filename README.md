@@ -18,7 +18,7 @@ A boilerplate for [RAGE MP] with [MongoDB] and [Typescript]!
 4. Run `yarn build` to compile both `server` and `client`
 
 # Modules
-All the gameplay code should be placed within [modules](https://github.com/Wuzi/ragemp-boilerplate/tree/master/src/server/modules) folder, they are loaded automatically on server-side, you need to require them in [index.ts](https://github.com/Wuzi/ragemp-boilerplate/blob/master/src/client/index.ts) on client-side though.
+Gameplay code should be placed within [modules (server)](https://github.com/Wuzi/ragemp-boilerplate/tree/master/src/server/modules) and [modules (client)](https://github.com/Wuzi/ragemp-boilerplate/blob/master/src/client/modules), after creating the module you need to add to the modules array in modules entry-point.
 
 # Languages
 You can set the language of the gamemode changing the [.env](https://github.com/Wuzi/ragemp-boilerplate/blob/master/.env.example) file, if your language is not here you can create it [here](https://github.com/Wuzi/ragemp-boilerplate/tree/master/src/server/lang) and [here](https://github.com/Wuzi/ragemp-boilerplate/tree/master/src/client/lang) and import them in the lang.loader.

@@ -1,16 +1,14 @@
-/**
- * Loaders
- */
-import 'loaders/lang.loader';
-
-/**
- * Utils
- */
+import { LangLoader } from 'loaders/lang.loader';
+import { ModuleLoader } from 'loaders/module.loader';
 import 'utils/spot';
 
-/**
- * Modules
- */
-import 'modules/player';
+async function bootstrap(): Promise<void> {
+  await Promise.all([
+    ModuleLoader.load(),
+    LangLoader.load(),
+  ]);
 
-mp.events.call('clientLaunched');
+  mp.events.call('clientLaunched');
+}
+
+bootstrap();

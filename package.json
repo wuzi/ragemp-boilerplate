@@ -36,11 +36,10 @@
   "devDependencies": {
     "@types/bcrypt": "^3.0.0",
     "@types/dotenv": "^6.1.1",
-    "@types/glob": "^7.1.1",
     "@types/mongoose": "^5.11.97",
     "@types/node": "^12.7.1",
-    "@types/ragemp-c": "github:CocaColaBear/types-ragemp-c#master",
-    "@types/ragemp-s": "github:wuzi/types-ragemp-s#master",
+    "@types/ragemp-c": "github:CocaColaBear/types-ragemp-c#v1.0",
+    "@types/ragemp-s": "github:CocaColaBear/types-ragemp-s#v1.0",
     "@typescript-eslint/eslint-plugin": "^4.30.0",
     "@typescript-eslint/parser": "^4.30.0",
     "eslint": "^7.32.0",
