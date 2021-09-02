@@ -5,12 +5,14 @@ import bootstrapLoader from './loaders/bootstrap.loader';
 import moduleLoader from './loaders/module.loader';
 dotenv.config();
 
-/**
- * Connect to database before anything else
- */
-(async (): Promise<void> => {
+async function bootstrap(): Promise<void> {
   await databaseLoader();
-  languageLoader();
-  bootstrapLoader();
-  moduleLoader();
-})();
+
+  await Promise.all([
+    languageLoader(),
+    bootstrapLoader(),
+    moduleLoader(),
+  ]);
+}
+
+bootstrap();
