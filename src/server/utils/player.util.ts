@@ -5,8 +5,8 @@ export class PlayerUtil {
    * @return {PlayerMp | PlayerMp[] | undefined} Returns a single PlayerMp if only one player is found,
    * an array of PlayerMp if multiple players are found or undefined if none is found
    */
-  static findPlayer(idOrName: string): PlayerMp | PlayerMp[] | undefined {
-    if (!isNaN(+idOrName))
+  public static findPlayer(idOrName: string): PlayerMp | PlayerMp[] | undefined {
+    if (!Number.isNaN(+idOrName))
       return mp.players.at(+idOrName);
 
     let found = 0;
