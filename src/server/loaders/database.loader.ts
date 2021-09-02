@@ -1,10 +1,12 @@
 import mongoose from 'mongoose';
 import logger from '../utils/logger.util';
 
+/**
+ * Connects to database
+ */
 export default async function (): Promise<void> {
   if (!process.env.DATABASE) {
-    logger('database', 'Env variable "DATABASE" is not defined!', 'error');
-    return;
+    throw new Error('Env variable "DATABASE" is not defined!');
   }
 
   try {

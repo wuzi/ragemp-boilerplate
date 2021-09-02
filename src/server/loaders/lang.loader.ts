@@ -4,6 +4,9 @@ import logger from '../utils/logger.util';
 // languages
 import en from '../lang/en';
 
+/**
+ * Loads the gamemode languages
+ */
 export default function (): void {
   try {
     i18next.init({
