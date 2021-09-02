@@ -4,7 +4,7 @@ import logger from '../utils/logger.util';
 // languages
 import en from '../lang/en';
 
-const languageLoader = (): void => {
+export default function (): void {
   try {
     i18next.init({
       lng: process.env.LANGUAGE,
@@ -16,6 +16,4 @@ const languageLoader = (): void => {
   } catch (err) {
     logger('loader', `Error while loading languages (Error: ${err instanceof Error ? err.message : ''})!`, 'error');
   }
-};
-
-export default languageLoader;
+}

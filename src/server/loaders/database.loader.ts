@@ -1,17 +1,16 @@
 import mongoose from 'mongoose';
 import logger from '../utils/logger.util';
 
-const databaseLoader = async (): Promise<void> => {
+export default async function (): Promise<void> {
   if (!process.env.DATABASE) {
     logger('database', 'Env variable "DATABASE" is not defined!', 'error');
     return;
   }
 
-  mongoose.connect(process.env.DATABASE).then((): void => {
+  try {
+    await mongoose.connect(process.env.DATABASE);
     logger('database', 'Database connected successfully.', 'info');
-  }).catch((): void => {
-    logger('database', 'Could not connnect to database.', 'error');
-  });
-};
-
-export default databaseLoader;
+  } catch (err) {
+    logger('database', `Could not connnect to database (Error: ${err instanceof Error ? err.message : ''}).`, 'error');
+  }
+}

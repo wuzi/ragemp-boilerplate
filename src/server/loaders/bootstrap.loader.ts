@@ -4,7 +4,7 @@ import logger from '../utils/logger.util';
 /**
  * Spawn entities into world
  */
-const bootstrapLoader = async (): Promise<void> => {
+export default async function (): Promise<void> {
   try {
     /**
      * Load all entities asynchronously
@@ -19,6 +19,4 @@ const bootstrapLoader = async (): Promise<void> => {
   } catch (err) {
     logger('loaders', `Error while bootstrapping game (Error: ${err instanceof Error ? err.message : ''})!`, 'error');
   }
-};
-
-export default bootstrapLoader;
+}
