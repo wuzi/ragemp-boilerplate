@@ -1,5 +1,4 @@
 {
-  "compileOnSave": true,
   "compilerOptions": {
     "strict": true,
     "target": "es2015",
@@ -10,8 +9,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "types" : ["node", "ragemp-s"],
-    "outDir": "../../packages/rage",
-    "allowSyntheticDefaultImports": true
+    "outDir": "../../packages/rage"
   },
   "include": [
     "**/*"
