@@ -1,5 +1,4 @@
-import { LangLoader } from 'loaders/lang.loader';
-import { ModuleLoader } from 'loaders/module.loader';
+import { LangLoader, ModuleLoader } from 'loaders';
 import 'utils/spot';
 
 async function bootstrap(): Promise<void> {

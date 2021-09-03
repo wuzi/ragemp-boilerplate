@@ -1,5 +1,5 @@
 import { RageModule } from 'core';
-import { hideHudElements } from 'utils/hud';
+import { hideHudElements } from 'utils';
 
 export class PlayerModule implements RageModule {
   public clientLaunched(): void {

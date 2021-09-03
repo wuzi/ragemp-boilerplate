@@ -1,8 +1,5 @@
 import dotenv from 'dotenv';
-import { DatabaseLoader } from './loaders/database.loader';
-import { LangLoader } from './loaders/lang.loader';
-import { BootstrapLoader } from './loaders/bootstrap.loader';
-import { ModuleLoader } from './loaders/module.loader';
+import { DatabaseLoader, LangLoader, BootstrapLoader, ModuleLoader } from './loaders';
 
 async function bootstrap(): Promise<void> {
   dotenv.config();
