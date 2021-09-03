@@ -1,5 +1,5 @@
 import { LangLoader, ModuleLoader } from 'loaders';
-import 'utils/spot';
+import 'utils/spot.util';
 
 async function bootstrap(): Promise<void> {
   await Promise.all([
