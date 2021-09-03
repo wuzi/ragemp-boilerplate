@@ -2363,6 +2363,11 @@ queue-microtask@^1.2.2:
   resolved "https://registry.yarnpkg.com/queue-microtask/-/queue-microtask-1.2.3.tgz#4929228bbc724dfac43e0efb058caf7b6cfb6243"
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
 
+rage-rpc@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/rage-rpc/-/rage-rpc-0.4.0.tgz#8fb5745691f0d1962fdbc18a29475c7bce72ec43"
+  integrity sha512-HF+95tUM/RWOXSDW2lsirQmdhiNZsaDnZLAzaUo0wJmsZ37qmy8BzyVkOx2oboMCS+mJmXvZhMKcKA10rptjeQ==
+
 rc@^1.0.1, rc@^1.1.6:
   version "1.2.8"
   resolved "https://registry.yarnpkg.com/rc/-/rc-1.2.8.tgz#cd924bf5200a075b83c188cd6b9e211b7fc0d3ed"

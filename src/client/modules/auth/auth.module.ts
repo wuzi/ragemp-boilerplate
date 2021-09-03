@@ -1,7 +1,10 @@
+import rpc from 'lib/rage-rpc';
 import { RageModule } from 'core';
 import { toggleInteractModeCEF } from 'utils';
 
 export class AuthModule implements RageModule {
+  public browser?: BrowserMp;
+
   public readonly coordinates = {
     camera: {
       start: {
@@ -20,9 +23,18 @@ export class AuthModule implements RageModule {
     player: new mp.Vector3(-498.3053, 4348.135, 66.42624),
   };
 
-  public showAuthScene(): void {
-    toggleInteractModeCEF(true);
+  constructor() {
+    rpc.register('playerLogin', () => {
+      this.hideAuthScene();
+    });
+  }
 
+  public showAuthScene(): void {
+    if (!this.browser) {
+      this.browser = mp.browsers.new('package://views/index.html');
+    }
+
+    this.browser.active = true;
     mp.players.local.position = this.coordinates.player;
 
     const startCamera = mp.cameras.new(
@@ -54,12 +66,22 @@ export class AuthModule implements RageModule {
     startCamera.setActive(true);
     endCamera.setActiveWithInterp(startCamera.handle, 90000, 0, 0);
     mp.game.cam.renderScriptCams(true, false, 0, true, false);
+
+    toggleInteractModeCEF(true);
+
+    // hack to ensure the cursor is going to be visible
+    setTimeout(() => mp.gui.cursor.visible = true, 1000);
   }
 
   public hideAuthScene(): void {
-    toggleInteractModeCEF(false);
+    if (this.browser) {
+      this.browser.destroy();
+      this.browser = undefined;
+    }
 
     mp.game.cam.renderScriptCams(false, false, 0, true, false);
+
+    toggleInteractModeCEF(false);
   }
 
   public clientLaunched(): void {

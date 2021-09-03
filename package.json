@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start": "ragemp-server.exe",
+    "start:views": "cd src/views && yarn start",
     "watch": "nodemon --watch packages --watch client_packages --exec \"./ragemp-server.exe\"",
     "clean": "rimraf client_packages && rimraf packages",
     "build:server": "cd src/server && tsc",
     "build:client": "cd src/client && tsc",
-    "build": "npm run clean && npm run build:server && npm run build:client",
+    "build:views": "cd src/views && yarn build",
+    "build": "npm run clean && npm run build:server && npm run build:client && npm run build:views",
     "lint": "eslint . --ext .ts"
   },
   "husky": {
@@ -54,6 +56,7 @@
     "dotenv": "^8.0.0",
     "i18next": "^17.0.11",
     "log4js": "^5.0.0",
-    "mongoose": "^6.0.4"
+    "mongoose": "^6.0.4",
+    "rage-rpc": "^0.4.0"
   }
 }

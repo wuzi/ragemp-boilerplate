@@ -15,7 +15,7 @@ A boilerplate for [RAGE MP] with [MongoDB] and [Typescript]!
 1. Run `tsc -w` in `src/server` and `src/client` folders
 2. Run `yarn watch` to make server restart with every change
 3. Run `yarn lint` to lint the code
-4. Run `yarn build` to compile both `server` and `client`
+4. Run `yarn build` to compile both `server`, `client` and `views`
 
 # Modules
 Gameplay code should be placed within [modules (server)](https://github.com/Wuzi/ragemp-boilerplate/tree/master/src/server/modules) and [modules (client)](https://github.com/Wuzi/ragemp-boilerplate/blob/master/src/client/modules), after creating the module you need to add to the modules array in modules entry-point.

@@ -16,10 +16,10 @@ export function hideHudElements(elements: number[]): void {
  * @param toggle - Enable/Disable CEF interaction mode
  */
 export function toggleInteractModeCEF(toggle: boolean): void {
-  mp.gui.cursor.visible = toggle;
   mp.game.ui.displayRadar(!toggle);
   mp.gui.chat.show(!toggle);
   mp.gui.chat.activate(!toggle);
+  mp.gui.cursor.visible = toggle;
 }
 
 /**
