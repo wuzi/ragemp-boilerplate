@@ -8,14 +8,14 @@ export class ModuleLoader {
   public static async load (): Promise<void> {
     try {
       for (const mod of modules) {
-        const instance = new mod();
+        const instance = new mod() as any;// eslint-disable-line @typescript-eslint/no-explicit-any
         for (const method of Reflect.ownKeys(Object.getPrototypeOf(instance))) {
           if (
             typeof method === 'string' &&
-            typeof instance[method as never] == 'function'
+            typeof instance[method] == 'function'
           ) {
             if (Object.values(RageEvent).includes(method as RageEvent)) {
-              mp.events.add(method, instance[method as never]);
+              mp.events.add(method, instance[method].bind(instance));
             }
           }
         }
