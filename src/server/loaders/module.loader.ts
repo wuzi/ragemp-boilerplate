@@ -1,6 +1,6 @@
-import logger from '../utils/logger.util';
-import { RageEvent } from '../interfaces/module.interface';
+import { RageEvent } from '../core';
 import modules from '../modules';
+import logger from '../utils/logger.util';
 
 export class ModuleLoader {
   /**

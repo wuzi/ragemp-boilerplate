@@ -1,4 +1,4 @@
-import { RageEvent } from 'interfaces/module.interface';
+import { RageEvent } from 'core';
 import modules from 'modules';
 
 export class ModuleLoader {

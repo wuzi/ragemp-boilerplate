@@ -1,5 +1,5 @@
 import i18next from 'i18next';
-import { RageModule } from '../../interfaces/module.interface';
+import { RageModule } from '../../core';
 
 export class ChatModule implements RageModule {
   public playerChat(player: PlayerMp, message: string): void {

@@ -1,4 +1,4 @@
-import { RageModule } from 'interfaces/module.interface';
+import { RageModule } from 'core';
 import { hideHudElements } from 'utils/hud';
 
 export class PlayerModule implements RageModule {
