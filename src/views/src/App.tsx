@@ -1,11 +1,13 @@
 import React from 'react';
-import rpc from 'rage-rpc';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
   function spawn() {
-    rpc.callClient('playerLogin');
+    if (process.env.NODE_ENV !== 'development') {
+      const rpc = require('rage-rpc');
+      rpc.callClient('playerLogin');
+    }
   }
 
   return (
